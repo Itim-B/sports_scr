@@ -1,5 +1,14 @@
 import editdistance
 import re
+import pytesseract
+from PIL import Image
+import easyocr
+from doctr.io import DocumentFile
+from doctr.models import ocr_predictor
+
+pytesseract.pytesseract.tesseract_cmd = r'/opt/homebrew/bin/tesseract'
+reader = easyocr.Reader(['en'])
+predictor = ocr_predictor(pretrained=True, export_as_straight_boxes=True)
 
 def get_champions_names(sport="natation"):
     dic_names = {}
@@ -9,8 +18,27 @@ def get_champions_names(sport="natation"):
             dic_names[last_name] = first_name
     return dic_names
 
-def reformat_predictions(raw_predictions):
+def reformat_easyocr(raw_predictions):
     return [pred[1] for pred in raw_predictions]
+
+def reformat_doctr(raw_predictions):
+    predictions = ''
+    for block in len(raw_predictions):
+        for line in block['lines']:
+            for word in line['words']:
+                predictions += f"{word['value']} "
+            predictions += '\n'
+    return predictions.split('\n')
+
+def infer(ocr_engine, img):
+    if ocr_engine == "pytesseract":
+        return pytesseract.image_to_string(Image.open(img)).split('\n')
+    elif ocr_engine == "easyocr":
+        return reformat_easyocr(reader.readtext(img))
+    else:
+        doc = DocumentFile.from_images(img)
+        result = predictor(doc)
+        return reformat_doctr(result.export()['pages'][0]["blocks"])
 
 def get_cleaned_prediction(prediction, dic_names, min_edit_distance=2):
     """Returns a cleaned version of the raw prediction
