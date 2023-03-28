@@ -23,9 +23,9 @@ if __name__ == "__main__":
         for img in imgs_paths:
             outf.write(f"----- Predictions for: {img}\n")
             predictions = infer(ocr_engine, img)
-            #cleaned_predictions = get_predictions_of_interest(predictions, dic_names)
-            # for p in cleaned_predictions:
-            #     outf.write(f"{p}\n")
-            for p in predictions:
+            cleaned_predictions = get_predictions_of_interest(predictions, dic_names)
+            for p in cleaned_predictions:
                 outf.write(f"{p}\n")
+            # for p in predictions:
+            #     outf.write(f"{p}\n")
         

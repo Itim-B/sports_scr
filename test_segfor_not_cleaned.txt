@@ -1,0 +1,765 @@
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt//000008.png
+07.71 
+===
+MENS 100M BREASTSTROKE WR 56.88 WJ59.01 
+===
+FINAL 
+===
+1:01.16 65 
+===
+1 IRLI CORBY Eoin 
+===
+1:01.16 ) 5 
+===
+2 GBRAK GOODBURNArchie 
+===
+1:00.69 4 
+===
+3 CAN MASTROMATTEO Gabe 
+===
+USA MATHENY Josh 
+===
+1:00.17 - 2 
+===
+5 USAEE HOUSEMANKeviNn 
+===
+1:00.55 - 3 
+===
+6 PNOSATOShomd 
+===
+1:01.26 67 
+===
+7 RUS GERASIMENKOMadisioy 
+===
+59.97 1 
+===
+8 JPNO ARAIYuta 
+===
+1:01.267 
+===
+QOMEGA 
+===
+
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt//000007.png
+26.68 
+===
+MEN'S 50M BREASTSTROKE 
+===
+14 
+===
+CR 26.10 
+===
+OICAL OMEGA MEEPG SEMIFINAL1 
+===
+WR26.10 
+===
+ Glidea SAMSUNCOR 
+===
+1 SWE+S SKAGIUS.Johannes 
+===
+27.02 5 
+===
+2 FNDJKOSEKIasuhiro 
+===
+27.176 
+===
+3 - B BRA LIMAFelipe 
+===
+26.68 1 
+===
+RSA 
+===
+I BURGHCameron 
+===
+26.74 2 
+===
+5 USA-ECORDES Kevin 
+===
+26.86  3 
+===
+AISCOZZOUIFabio 
+===
+26.96 4 
+===
+7 CHNI YANZibei 
+===
+27.338 
+===
+8 SOFSTEVENSPeter 
+===
+27.207 
+===
+
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt//000003.png
+WR:50.25 NR: 
+===
+53.11 
+===
+HEIDEYER Mika 
+===
+55.12 
+===
+CARNEZ Oceane 
+===
+WATTEL Marie 
+===
+54.70 
+===
+MARTIN Anouchka 
+===
+53.11 
+===
+NUWACZYK Lison 
+===
+54,63 
+===
+PINSOLLE Célia 
+===
+55.17 
+===
+SINAPIN Elodie 
+===
+55.11 
+===
+JPue 
+===
+(ANGERS 
+===
+56 0o 
+===
+NATATION CHABSIS BRAKES 
+===
+K& 
+===
+anini 
+===
+
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt//000012.png
+MEN'S 50MFREESTYLE 
+===
+21.61 
+===
+HEAT10 
+===
+WR 20.91 
+===
+OR2 21.30 
+===
+I AUS ABOOD Matthew 
+===
+22.47 8 
+===
+2 
+===
+PNEJNAKAMURAKotwI 
+===
+22.13 7 
+===
+3 - GBRXKPROUD Ben 
+===
+21.83 - 3 
+===
+USA = ADRIANNathan 
+===
+21.61 1 
+===
+5 USA- - ERVIN/Anthony 
+===
+21.63 - 
+===
+- 
+===
+2 
+===
+a GRE+ GKOLOMEEV Kristian 
+===
+21.93 - 5 
+===
+7CAND CONDORELLISanto 
+===
+21.83  3 
+===
+8 ROUTRANDAFR: Norbert 
+===
+22.10 6 
+===
+
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt//000002.png
+SEMIFINAL2 
+===
+LY 
+===
+WR 
+===
+55.48 
+===
+- P 
+===
+1 
+===
+RUS 
+===
+2 GRE! - - 
+===
+3 USA 
+===
+ECASHe 
+===
+HOUTOINASA 
+===
+SWEH DAHLIAK Kelsi 
+===
+Anna 
+===
+A 
+===
+CC  
+===
+GER 
+===
+- 
+===
+I 
+===
+Angeing 
+===
+laria 
+===
+ 
+===
+
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt//000000.png
+WR:48.88 NR:49.57 
+===
+- 
+===
+BURBAN Corentin 
+===
+51.43 
+===
+55.20 
+===
+BREFUEL 
+===
+- 
+===
+Simon 
+===
+54.06 
+===
+AVETAND Thomas 
+===
+NDOYE BROUARD Yohan 
+===
+53.50 
+===
+TOMAC Mewen 
+===
+51.43 
+===
+PASTULA Kacper 
+===
+52.29 
+===
+DESPREZ 
+===
+54.29 
+===
+BRUN 
+===
+Pierre-Yves 
+===
+- 
+===
+54.54 
+===
+Christophe 
+===
+54.70 
+===
+NATATION 
+===
+eDF 
+===
+TYR PagaaMIs BEMIE 1 
+===
+attasis "iPAs bory 6OOATE 
+===
+CNEWS 
+===
+RMC 
+===
+
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt//000010.png
+JSA 
+===
+4 - 
+===
+USA 
+===
+3 
+===
+/ 
+===
+BANELSine 
+===
+AUS COMERFORD 
+===
+WE 
+===
+MeKEONE Emma Mallory 
+===
+US  
+===
+5 
+===
+Tovor Cate 
+===
+IK 
+===
+- 
+===
+- 
+===
+
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt//000004.png
+Dames 100 m Brasse Séries-6 
+===
+MR:1:02.36 NR:1:05.43 
+===
+1:07.13 
+===
+0 - FRA ONOLFO Emma 
+===
+9 
+===
+1:13.34 
+===
+1 - FRA BARREAU Laure 
+2 - FRA RAYNERT Maud 
+===
+6 
+===
+1:12.29 
+===
+5 
+===
+1:10.96 
+===
+3 - FRA BLANCHETIERE Adele 
+===
+7 
+===
+1:12.41 
+===
+4 - FRA DEBERGHES Fanny 
+5 FRA GALLEGO Solène 
+===
+I 
+===
+1:07.13 
+===
+2 
+===
+1:08.30 
+===
+6 - FRA DELMAS Justine 
+===
+3 
+===
+- 
+===
+1:10.27 
+===
+- FRA PAQUIT Laura 
+===
+1:10.33 
+===
+8 - FRA DEAGE Albane 
+===
+8 
+===
+1:13.32 
+===
+9 FRA LINDAUER Emma 
+===
+10 
+===
+1:13.74 
+===
+rwS 
+===
+HMC 
+===
+GATATION 
+===
+eeDF 
+===
+TYR 
+===
+A 
+===
+
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt//000011.png
+FINAL 
+===
+25.74 7 
+===
+RUS KARASEVGLEB 
+===
+25.48 4 
+===
+FERCUONCONOR 
+===
+25.52 5 
+===
+DANIEL 
+===
+24.63 1 
+===
+USAEANDR - 
+===
+25.30 2 
+===
+- ESPG CONZALEZHUGO 
+===
+25.38 - 3 
+===
+POL-STC 
+===
+WSKIKAL 
+===
+25.59 6 
+===
+POL 
+===
+1 
+===
+26.20 8 
+===
+UA-ABERONCOLAS 
+===
+
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt//000009.png
+- / 
+===
+52.72.GR 
+===
+AEAIOREITATTALAMANUOTO 
+===
+ 
+===
+1 
+===
+53.44 
+===
+ALIA CONI 
+===
+33 
+===
+- 
+===
+30 
+===
+4.1 BRULN Annika 
+5.8 BUSCHKim 
+===
+CUP 
+===
+6.2 OMOIORika 
+===
+1 
+55.35 
+===
+Mgrom 
+Lazio 
+yo 
+ENAS 
+===
+76 
+===
+55.66 
+===
+STEIGERJessica 
+===
+8.7 
+===
+Cittal metrupoltana 
+diRoma Capitale 
+===
+NS 
+===
+53.44 
+===
+CM/ VIL 
+===
+
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt//000013.png
+Messieurs 100 - m Nage Libre 
+===
+WR:46.91 NR:46.94 
+===
+Séries-8 
+===
+COIFFARD 
+===
+49.91 
+===
+Florian 
+===
+8 
+===
+TRILLAT Léo 
+===
+51.85 
+===
+MERESSE Remi 
+===
+o 
+===
+51.35 
+===
+HENX Julien 
+===
+50.99 
+===
+ATSU Jonathan 
+===
+50.56 
+===
+LAMBERT Hugo 
+===
+49.91 
+===
+SALVAN Hadrien 
+===
+51.47 
+===
+AUBRY Flavien 
+===
+50.90 
+===
+NATATION 
+===
+s 
+"eDF 
+===
+CNEWE 6 
+===
+RMC 51.45 
+===
+TY SY - 
+===
+ N 
+===
+
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt//000014.png
+Dames 100 m Dos Séries-6 
+===
+MR:55.03 NR:57.16 
+===
+58.42 
+===
+0 - FRA POTHET Lola 
+===
+10 1:04.93 
+===
+I FRA CORMIER Alexane 
+===
+9 
+===
+1:04.15 
+===
+2 FRA REMBERT E1?2onore 
+===
+8 
+===
+1:04.06 
+===
+3 FRA JEAN Mathilde 
+===
+3 
+===
+1:01.67 
+===
+4 FRA CINI Mathilde 
+===
+1 
+===
+58.42 
+===
+5 RUS EGOROVA Valériya 
+6 FRA JULIEN Camille 
+===
+2 
+===
+59.38 
+===
+7 
+===
+1:02.82 
+===
+FRA GOURAUD Agathe 
+===
+) 
+0 
+===
+1:02.54 
+===
+- FRA COUSSON Clothilde 
+===
+9 
+===
+1:02.62 
+===
+FRA LECANU Maelle 
+===
+1:02.47 
+===
+M 
+===
+
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt//000005.png
+WR:44.94 NR:44.94 
+===
+BOURELLY 
+===
+47.40 
+===
+Lorys 
+===
+ 
+===
+48.96 
+===
+AUBRY Flavien 
+===
+POTHAIN Jordan 
+===
+48.96 
+===
+GROUSSET Maxime 
+===
+MIGNON Clément 
+===
+ATSU Jonathan 
+===
+GUTH Guillaume 
+===
+CHATTI Souhaiel 
+===
+NATATION 
+===
+eDF 
+===
+TYR Eis 
+===
+MRLRE MABAL bCV BPORTA 
+===
+CNEWS 
+===
+RMC - 
+===
+
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt//000001.png
+WR10413 
+===
+1:06.78 
+===
+TXLA CoKNadiayn 
+===
+3 
+===
+MICH U WESSE 
+===
+1:07.51 5 
+===
+mN 
+===
+1:07.56 
+===
+NYAC LARSONBre Mircndo 
+===
+CROW 
+===
+Breeja 
+===
+U 
+===
+- 
+===
+TDPS E 
+===
+1:06.78 
+===
+DCST 
+===
+INAQ 
+===
+Elie 
+===
+Nid 
+===
+E 
+===
+1:08.37 
+===
+OMEGA 
+===
+1:08.93 0 
+===
+
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt//000006.png
+1:55.98 
+===
+200MI 
+===
+ARTERY_HEAT46 
+===
+MENS WJ 1:53.79 CR 1:53.87 
+===
+2:04.28 7 
+===
+U 
+===
+RSAX BREYENBACHRuon 
+===
+1:59.76 4 
+===
+KAMMANNBjorn 
+===
+1 GER 
+===
+1:59.90 5 
+===
+2 HUN- TOROKI Dominik 
+===
+2:01.486 
+===
+3 
+===
+RUS KIMENSHCHEYVodin 1:55.98 1 
+===
+USAE URLANDOLuca 
+===
+1:56.862 
+===
+5 TPEK @ WANGI Kuan-Hung 
+===
+1:59.34 3 
+===
+USAEE BURNS Brendan 
+===
+9 
+===
+8 PHI> KHOUZAMJean-Pere 
+===
+2:04.38 
+===
+9SGPS TANEphraim 
+===
+2:04.36 8 
+===
+QOMEGA 
+===
+

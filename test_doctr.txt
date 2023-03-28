@@ -1,0 +1,258 @@
+----- Predictions for: data/natation/000008.png
+59.71
+59.01
+56.88
+01.16
+RLI CORBYE Eoin
+01.16
+00.69
+CAN CAN CAN CAN CAN CAN CAN
+00.17
+00.55
+01.26
+RUS RUS
+59.97
+01.26
+----- Predictions for: data/natation/000007.png
+26.68
+WR 26.10
+27.02
+27.17
+BRA BRA
+26.68
+26.74
+26.86
+ITAI ITAI
+CHNI
+26.96
+27.33
+STEVENSI Peter
+27.20
+----- Predictions for: data/natation/000003.png
+50.25
+53.11
+1HETDEYER Mika
+55.12
+CARNEZ Oceane
+54.70
+WATTEL Marie
+MARTIN
+53.11
+54.63
+PINSOLLE Célia
+55.17
+SINAPIN Elodie
+55.11
+56.99
+PA PA PA
+----- Predictions for: data/natation/000012.png
+21.61
+WR OR OR 20.91
+AUS ABOOD Matthew
+22.47
+22.13
+GBR PROUD Ben
+21.83
+21.61
+21.63
+21.93
+21.83
+22.10
+ADRIANI NNathan
+GKOLOMEEV Kristian
+CAN CAN CAN CAN CAN CAN CAN
+ROU ROU TRANDAFIR Norbert
+----- Predictions for: data/natation/000002.png
+55.48
+56.29
+CR CR 55.53
+L
+57.78
+57.99
+57.06
+56.29
+CAC CAC CAC CAC
+MACNEL MACNEL
+GER GER
+ITA ITA
+BIAN BIAN BIAN BIAN BIAN
+----- Predictions for: data/natation/000000.png
+48.88
+51.43
+BURBAN R
+55.20
+BREFUEL Simon
+AVETAND Thomas
+54.06
+53.50
+NDOYE BROUARD Yohan
+TOMAC Mewen
+51.43
+PASTULA
+DESPREZ
+52.29
+54.29
+TBRUN TBRUN
+54.54
+54.70
+TYR TYR
+MIPA
+RMC AA AA AA AA
+----- Predictions for: data/natation/000010.png
+51.71
+MANUELSI
+MCKEON Emma
+52.04
+EE EE JOE
+53.22
+AND AND AND AND AMP
+52.75
+RUCKT
+A A A
+52.43
+53.03
+A A A
+53.05
+53.44
+----- Predictions for: data/natation/000004.png
+02.36
+FRA ONOLFO Emma
+FRA BARREAU Laure
+FRA RAYNERT Maud
+07.13
+13.34
+12.29
+10.96
+FRA BLANCHETIERE Adele 12.41
+FRA DEBERGHES Fanny 07.13
+FRA GALLEGO Solène
+FRA DELMAS Justine
+FRA PAQUIT Laura
+DEAGE Albane
+LINDAVER Enma
+08.30
+10.27
+10.33
+13.32
+13.74
+TYR TYR RMC
+----- Predictions for: data/natation/000011.png
+L
+25.74
+25.48
+25.52
+RUS RUS KARASEV GLEB
+IRL FERGUSON
+ROU ROU
+24.63
+25.30
+25.38
+25.59
+26.20
+----- Predictions for: data/natation/000009.png
+FIN FIN FIN FIN
+CONI CONI
+52.72
+53.44
+53.54
+53.66
+54.90
+55.22
+55.31
+55.35
+55.66
+LEn LEn
+CUP
+diR
+ROMAD
+53.44
+----- Predictions for: data/natation/000013.png
+46.91
+COIFFARD
+TRILLAT Léo
+MERESSE
+49.91
+51.85
+51.35
+50.99
+50.56
+49.91
+51.47
+50.90
+HENX Julien
+ATSU Jonathan
+LAMBERT LAMBERT
+SALVAN Hadrien
+AUBRY Flavien
+RMC 51.45
+TY
+Es Es
+LM
+----- Predictions for: data/natation/000014.png
+Dos Dos
+55.03
+58.42
+04.93
+04.15
+FRAI REMBERT REMBERT 04.06
+CINI Mathilde
+01.67
+58.42
+5RUS EGOROVA Valériya 59.38
+JULIEN Camille
+02.82
+GOURAUD Agathe 02.54
+COUSSON Clothilde 02.62
+LECANU Maelle
+A A A 02.47
+----- Predictions for: data/natation/000005.png
+44.94
+BOURELLY Lorys
+47.40
+AUBRY Flavien
+48.96
+POTHAIN Jordan
+48.96
+GROUSSET Maxime
+MIGNON Clément
+48.07
+47.48
+ATSU Jonathan
+47.40
+GUTH Guillaume
+49.16
+CHATTI Souhaiel
+48.65
+TYR TYR
+50.02
+RMC
+----- Predictions for: data/natation/000001.png
+V
+06.78
+VEISS Emil
+07.51
+07.56
+07.33
+TUCKERN Mironda
+CROW
+06.78
+07.37
+DOBLE
+TNAQ
+08.37
+08.93
+----- Predictions for: data/natation/000006.png
+55.98
+CR CR 53.87
+VI 53.79
+04.28
+59.76
+GER GER
+59.90
+01.48
+55.98
+56.86
+59.34
+HUNE TOROK Dominik
+04.38
+04.36

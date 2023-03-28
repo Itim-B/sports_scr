@@ -1,13 +1,13 @@
 import editdistance
 import re
-import pytesseract
+#import pytesseract
 from PIL import Image
-import easyocr
+#import easyocr
 from doctr.io import DocumentFile
 from doctr.models import ocr_predictor
 
-pytesseract.pytesseract.tesseract_cmd = r'/opt/homebrew/bin/tesseract'
-reader = easyocr.Reader(['en'])
+#pytesseract.pytesseract.tesseract_cmd = r'/opt/homebrew/bin/tesseract'
+#reader = easyocr.Reader(['en'])
 predictor = ocr_predictor(pretrained=True, export_as_straight_boxes=True)
 
 def get_champions_names(sport="natation"):
@@ -23,11 +23,12 @@ def reformat_easyocr(raw_predictions):
 
 def reformat_doctr(raw_predictions):
     predictions = ''
-    for block in len(raw_predictions):
+    for block in raw_predictions:
         for line in block['lines']:
             for word in line['words']:
                 predictions += f"{word['value']} "
             predictions += '\n'
+        predictions += '===\n'
     return predictions.split('\n')
 
 def infer(ocr_engine, img):
@@ -55,14 +56,16 @@ def get_cleaned_prediction(prediction, dic_names, min_edit_distance=2):
     cprediction = []
 
     real_first_name = '' # Will keep in memory the "real" first name
+    added_first_name = False
 
     # We use the last name as a reference for deciding to keep a prediction
     for comp in prediction.strip().split(' '):
         # If a first name was found, check if this part of the 
         # prediction is that first name
         if len(real_first_name) > 0:
-            if editdistance.eval(real_first_name, comp) <= min_edit_distance:
-                cprediction.append(comp)
+            if not added_first_name:
+                if editdistance.eval(real_first_name, comp) <= min_edit_distance:
+                    cprediction.append(comp)
         for n in dic_names.keys():
             if editdistance.eval(n, comp) <= min_edit_distance:
                 # We add all the last names of the player
