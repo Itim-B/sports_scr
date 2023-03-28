@@ -16,6 +16,6 @@ def create_images_path_list(path):
     paths = []
     for f in os.listdir(path):
         if is_image(f):
-            paths.append(f)
+            paths.append(path + "/" + f)
     
     return paths
