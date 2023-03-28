@@ -1,14 +1,14 @@
 import editdistance
 import re
-#import pytesseract
+import pytesseract
 from PIL import Image
 #import easyocr
-from doctr.io import DocumentFile
-from doctr.models import ocr_predictor
+#from doctr.io import DocumentFile
+#from doctr.models import ocr_predictor
 
-#pytesseract.pytesseract.tesseract_cmd = r'/opt/homebrew/bin/tesseract'
+pytesseract.pytesseract.tesseract_cmd = r'/opt/homebrew/bin/tesseract'
 #reader = easyocr.Reader(['en'])
-predictor = ocr_predictor(pretrained=True, export_as_straight_boxes=True)
+#predictor = ocr_predictor(pretrained=True, export_as_straight_boxes=True)
 
 def get_champions_names(sport="natation"):
     dic_names = {}
@@ -56,23 +56,24 @@ def get_cleaned_prediction(prediction, dic_names, min_edit_distance=2):
     cprediction = []
 
     real_first_name = '' # Will keep in memory the "real" first name
-    added_first_name = False
+    added_first_name = False # Keep a tab if the first name was added or not
 
     # We use the last name as a reference for deciding to keep a prediction
     for comp in prediction.strip().split(' '):
+        added = False # A component of the prediction has to be corrected and added only one time
         # If a first name was found, check if this part of the 
         # prediction is that first name
         if len(real_first_name) > 0:
-            if not added_first_name:
-                if editdistance.eval(real_first_name, comp) <= min_edit_distance:
-                    cprediction.append(comp)
-                    added_first_name = True
-        for n in dic_names.keys():
-            if editdistance.eval(n, comp) <= min_edit_distance:
-                # We add all the last names of the player
+            if editdistance.eval(real_first_name, comp) <= min_edit_distance:
                 cprediction.append(comp)
-                # We keep in memory the first name corresponding to that last name
-                real_first_name = dic_names[n]
+        for n in dic_names.keys():
+            if not added:
+                if editdistance.eval(n, comp) <= min_edit_distance:
+                    # We add all the last names of the player
+                    cprediction.append(comp)
+                    # We keep in memory the first name corresponding to that last name
+                    real_first_name = dic_names[n]
+                    added = True
     
     # Now we add the score if we find one
     found_score = re.findall(r"\d{2}[.,]\d{2}", prediction.strip())
