@@ -66,6 +66,7 @@ def get_cleaned_prediction(prediction, dic_names, min_edit_distance=2):
             if not added_first_name:
                 if editdistance.eval(real_first_name, comp) <= min_edit_distance:
                     cprediction.append(comp)
+                    added_first_name = True
         for n in dic_names.keys():
             if editdistance.eval(n, comp) <= min_edit_distance:
                 # We add all the last names of the player
