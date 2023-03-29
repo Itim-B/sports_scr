@@ -24,8 +24,8 @@ The application will generate a video or image file with the recognized players 
 
 The Sports SCR application currently supports the following sports:
 
-Table Tennis
-Swimming
+- Table Tennis
+- Swimming
 
 # Contribution
 
