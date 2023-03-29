@@ -110,6 +110,8 @@ def extract_roi_clipseg_text(image, prompt=default_prompt, thresh=0.5):
 
     """
 
+    image = Image.open(image)
+
     inputs = processor(text=prompt, images=[image], padding="max_length", return_tensors="pt")
 
     # predict
@@ -118,7 +120,7 @@ def extract_roi_clipseg_text(image, prompt=default_prompt, thresh=0.5):
     preds = outputs.logits.unsqueeze(0)
 
     # crop the image using the segmented image obtained from the model
-    cropped_image = crop_image(image, preds, thresh=thresh)
+    cropped_image = crop_image(image, preds[0], thresh=thresh)
 
     # return the ROI image
     return cropped_image
@@ -153,7 +155,7 @@ def extract_roi_clipseg_visual(image, prompt, thresh=0.5):
     preds = torch.transpose(preds, 0, 1)
 
     # crop image
-    cropped_image = crop_image(image, preds[0], thresh=0.5)
+    cropped_image = crop_image(image, preds[0], thresh=thresh)
 
     # return the ROI image
     return cropped_image
