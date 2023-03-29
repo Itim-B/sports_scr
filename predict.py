@@ -1,32 +1,26 @@
-import editdistance
 import re
-import pytesseract
-from PIL import Image
+import warnings
+import os
 import easyocr
-#from doctr.io import DocumentFile
-#from doctr.models import ocr_predictor
+import editdistance
+from doctr.io import DocumentFile
+from doctr.models import ocr_predictor
+#import pytesseract
+from PIL import Image
 
-pytesseract.pytesseract.tesseract_cmd = r'/opt/homebrew/bin/tesseract'
+# Ignore the warning
+warnings.filterwarnings("ignore")
+#pytesseract.pytesseract.tesseract_cmd = r'/opt/homebrew/bin/tesseract'
 reader = easyocr.Reader(['en'])
-#predictor = ocr_predictor(pretrained=True, export_as_straight_boxes=True)
+predictor = ocr_predictor(pretrained=True, export_as_straight_boxes=True)
 
-def get_champions_names(sport="natation"):
+def get_champions_names(data_path):
     dic_names = {}
-    with open(f"data/champions/{sport}.txt", "r") as file:
+    with open(data_path, "r") as file:
         for line in file.readlines():
-            comps = line.strip().split()
-            lastnames = []
-            firstnames = []
-            lastname = ' '
-            firstname = ' '
-            for comp in comps:
-                if comp.isupper():
-                    lastnames.append(comp)
-                else:
-                    firstnames.append(comp)
-            firstname = firstname.join(firstnames)
-            lastname = lastname.join(lastname)
-            dic_names[lastname] = firstname
+            split_name = line.strip().split()
+            last_name, first_name = ' '.join(split_name[:-1]), split_name[-1]
+            dic_names[last_name] = first_name
     return dic_names
 
 def reformat_easyocr(raw_predictions):
@@ -47,8 +41,7 @@ def infer(ocr_engine, img):
     elif ocr_engine == "easyocr":
         return reformat_easyocr(reader.readtext(img))
     else:
-        doc = DocumentFile.from_images(img)
-        result = predictor(doc)
+        result = predictor([img])
         return reformat_doctr(result.export()['pages'][0]["blocks"])
 
 # def get_cleaned_prediction(prediction, dic_names, min_edit_distance=2):

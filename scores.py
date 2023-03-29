@@ -1,7 +1,12 @@
 import sys
+import os
 from utils import *
 from predict import *
 from preprocess import *
+import warnings
+
+# Ignore the warning
+warnings.filterwarnings("ignore")
 
 # TODO: test correction d'orientation
 # TODO: combinaison EasyOCR et PyTesseract
@@ -18,7 +23,8 @@ if __name__ == "__main__":
     sport = sys.argv[1]
     ocr_engine = sys.argv[2]
     image_path = sys.argv[3]
-    output_name = sys.argv[4]
+
+    data_path = os.path.join(dir_path, f"data/champions/{sport}.txt")
 
     if sport == "tennis_table":
         default_visual_prompt = Image.open(tennis_scoreboard_path)
@@ -31,18 +37,25 @@ if __name__ == "__main__":
     imgs_paths = create_images_path_list(image_path)
 
     # OCR
-    dic_names = get_champions_names()
-    with open(output_name, "w") as outf:
-        for img in imgs_paths:
-            # Interest zone detection
-            if sport == "natation":
-                cropped_image = extract_roi_clipseg_visual(img, prompt=default_visual_prompt, thresh=0.5)
-                oriented_image = correct_orientation(cropped_image)
-            else:
-                oriented_image = img
-            outf.write(f"----- Predictions for: {img}\n")
-            predictions = infer(ocr_engine, oriented_image)
-            input_string = ' '.join(predictions)
-            result = extract_names_scores(input_string, dic_names, min_edit_distance=3)
+    dic_names = get_champions_names(data_path)
+
+    for img in imgs_paths:
+        # Interest zone detection
+        if sport == "natation":
+            cropped_image = extract_roi_clipseg_visual(img, prompt=default_visual_prompt, thresh=0.5)
+            oriented_image = correct_orientation(cropped_image)
+        else:
+            oriented_image = img
+        predictions = infer(ocr_engine, oriented_image)
+        input_string = ' '.join(predictions)
+        result = extract_names_scores(input_string, dic_names, min_edit_distance=3)
+        if not os.path.exists("result"):
+            os.makedirs('result')
+        with open(f"result/{img.split('/')[-1].split('.')[0]}.csv", "w") as outf:
             for r in result:
-                outf.write(f"{r}\n")
+                row = r.split()
+                score = row[-1]
+                firstname = row[-2]
+                lastname = ' '.join(row[:-2])
+                outf.write(f"{lastname}\t{firstname}\t{score}\n")
+
