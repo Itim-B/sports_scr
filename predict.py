@@ -12,7 +12,7 @@ reader = easyocr.Reader(['en'])
 
 def get_champions_names(sport="natation"):
     dic_names = {}
-    with open("champions/natation.txt", "r") as file:
+    with open("data/champions/natation.txt", "r") as file:
         for line in file.readlines():
             last_name, first_name = line.strip().split()
             dic_names[last_name] = first_name
