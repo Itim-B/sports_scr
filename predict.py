@@ -14,8 +14,19 @@ def get_champions_names(sport="natation"):
     dic_names = {}
     with open("data/champions/natation.txt", "r") as file:
         for line in file.readlines():
-            last_name, first_name = line.strip().split()
-            dic_names[last_name] = first_name
+            comps = line.strip().split()
+            lastnames = []
+            firstnames = []
+            lastname = ' '
+            firstname = ' '
+            for comp in comps:
+                if comp.isupper():
+                    lastnames.append(comp)
+                else:
+                    firstnames.append(comp)
+            firstname = firstname.join(firstnames)
+            lastname = lastname.join(lastname)
+            dic_names[lastname] = firstname
     return dic_names
 
 def reformat_easyocr(raw_predictions):
