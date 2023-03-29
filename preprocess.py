@@ -213,8 +213,8 @@ def correct_orientation(image):
             second_point = el[0][1]
 
             # Define the two points as column vectors
-            A = np.array([[first_point[0]], [-first_point[1]]])
-            B = np.array([[second_point[0]], [-second_point[1]]])
+            A = np.array([first_point[0], -first_point[1]])
+            B = np.array([second_point[0], -second_point[1]])
 
             # Define the x-axis vector as a column vector
             x_axis = np.array([[1], [0]])
@@ -222,18 +222,7 @@ def correct_orientation(image):
             # Compute the vector from A to B
             vector_AB = B - A
 
-            # Compute the dot product between the vector AB and the x-axis vector
-            dot_product = np.dot(vector_AB.T, x_axis)
-
-            # Compute the magnitudes of the vectors
-            magnitude_AB = np.linalg.norm(vector_AB)
-            magnitude_x_axis = np.linalg.norm(x_axis)
-
-            # Compute the cosine of the angle between the vector and the x-axis
-            cosine_angle = dot_product / (magnitude_AB * magnitude_x_axis)
-
-            # Compute the angle in radians using the arccosine function
-            angle = np.arccos(cosine_angle)
+            angle = np.arctan(vector_AB[1]/vector_AB[0])
 
             angle_sum += angle
             count += 1
@@ -243,7 +232,7 @@ def correct_orientation(image):
     # Reorient the image according to the average angle
     height, width = img.shape[:2]
     center = (width // 2, height // 2)
-    M = cv2.getRotationMatrix2D(center, math.degrees(average_angle[0][0]), 1.0)
+    M = cv2.getRotationMatrix2D(center, math.degrees(-average_angle), 1.0)
     rotated = cv2.warpAffine(img, M, (width, height), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REPLICATE)
 
     return rotated
