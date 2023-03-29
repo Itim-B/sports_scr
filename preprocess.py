@@ -3,6 +3,7 @@
 
 import warnings
 
+import os
 import cv2
 import mmcv
 import numpy as np
@@ -120,12 +121,7 @@ def extract_roi_clipseg_text(image, prompt=default_prompt, thresh=0.5):
     # return the ROI image
     return cropped_image
 
-# this is the default visual prompt used to identify the ROIs.
-default_visual_prompt = Image.open("../data/natation/ROI/CLIP_visual_prompt/scoreboard.png")
-default_visual_prompt = np.array(default_visual_prompt)[:,:, 0:3]
-
-
-def extract_roi_clipseg_visual(image, prompt=default_visual_prompt, thresh=0.5):
+def extract_roi_clipseg_visual(image, prompt, thresh=0.5):
     
     """
 
@@ -143,6 +139,8 @@ def extract_roi_clipseg_visual(image, prompt=default_visual_prompt, thresh=0.5):
     None.
 
     """
+
+    image = Image.open(image)
 
     encoded_image = processor(images=[image], return_tensors="pt")
     encoded_prompt = processor(images=[prompt], return_tensors="pt")
