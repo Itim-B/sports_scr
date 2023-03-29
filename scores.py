@@ -42,8 +42,7 @@ if __name__ == "__main__":
                 oriented_image = img
             outf.write(f"----- Predictions for: {img}\n")
             predictions = infer(ocr_engine, oriented_image)
-            # cleaned_predictions = get_predictions_of_interest(predictions, dic_names)
-            # for p in cleaned_predictions:
-            #     outf.write(f"{p}\n")
-            for p in predictions:
-                outf.write(f"{p}\n")
+            input_string = ' '.join(predictions)
+            result = extract_names_scores(input_string, dic_names, min_edit_distance=3)
+            for r in result:
+                outf.write(f"{r}\n")

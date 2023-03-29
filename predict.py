@@ -12,7 +12,7 @@ reader = easyocr.Reader(['en'])
 
 def get_champions_names(sport="natation"):
     dic_names = {}
-    with open("data/champions/natation.txt", "r") as file:
+    with open(f"data/champions/{sport}.txt", "r") as file:
         for line in file.readlines():
             comps = line.strip().split()
             lastnames = []
@@ -39,7 +39,6 @@ def reformat_doctr(raw_predictions):
             for word in line['words']:
                 predictions += f"{word['value']} "
             predictions += '\n'
-        predictions += '===\n'
     return predictions.split('\n')
 
 def infer(ocr_engine, img):
