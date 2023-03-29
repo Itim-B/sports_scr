@@ -11,14 +11,21 @@ from preprocess import *
 cur_path = os.path.abspath(__file__)
 dir_path = os.path.dirname(cur_path)
 scoreboard_path = os.path.join(dir_path, "data/natation/ROI/CLIP_visual_prompt/scoreboard.png")
-default_visual_prompt = Image.open(scoreboard_path)
-default_visual_prompt = np.array(default_visual_prompt)[:,:, 0:3]
+tennis_scoreboard_path = os.path.join(dir_path, "data/tennis-table/ROI/CLIP_visual_prompt/tennis_score_board.png")
 
 if __name__ == "__main__":
     # Get args
-    ocr_engine = sys.argv[1]
-    image_path = sys.argv[2]
-    output_name = sys.argv[3]
+    sport = sys.argv[1]
+    ocr_engine = sys.argv[2]
+    image_path = sys.argv[3]
+    output_name = sys.argv[4]
+
+    if sport == "tennis_table":
+        default_visual_prompt = Image.open(tennis_scoreboard_path)
+        default_visual_prompt = np.array(default_visual_prompt)[:,:, 0:3]
+    elif sport == "natation":
+        default_visual_prompt = Image.open(scoreboard_path)
+        default_visual_prompt = np.array(default_visual_prompt)[:,:, 0:3]
 
     # Get paths
     imgs_paths = create_images_path_list(image_path)
@@ -28,9 +35,11 @@ if __name__ == "__main__":
     with open(output_name, "w") as outf:
         for img in imgs_paths:
             # Interest zone detection
-            cropped_image = extract_roi_clipseg_visual(img, prompt=default_visual_prompt, thresh=0.5)
-            oriented_image = correct_orientation(cropped_image)
-
+            if sport == "natation":
+                cropped_image = extract_roi_clipseg_visual(img, prompt=default_visual_prompt, thresh=0.5)
+                oriented_image = correct_orientation(cropped_image)
+            else:
+                oriented_image = img
             outf.write(f"----- Predictions for: {img}\n")
             predictions = infer(ocr_engine, oriented_image)
             # cleaned_predictions = get_predictions_of_interest(predictions, dic_names)
@@ -38,4 +47,3 @@ if __name__ == "__main__":
             #     outf.write(f"{p}\n")
             for p in predictions:
                 outf.write(f"{p}\n")
-        
