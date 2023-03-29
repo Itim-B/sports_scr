@@ -5,6 +5,8 @@ import warnings
 
 import os
 import cv2
+import easyocr
+import math
 import mmcv
 import numpy as np
 import torch
@@ -191,3 +193,55 @@ def crop_image(original_image, preds, thresh=0.5):
 
     # return the cropped image
     return cropped_image
+
+def correct_orientation(image):
+    reader = easyocr.Reader(['en'])
+
+    img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
+    # Get bounding boxes of text in the image
+    boxes = reader.readtext(img)
+
+    # Compute the average orientation of text in the image with respect to the x-axis
+    angle_sum = 0
+    count = 0
+    for el in boxes:
+        if len(el[0]) == 4:
+            first_point = el[0][0]
+            second_point = el[0][1]
+
+            # Define the two points as column vectors
+            A = np.array([[first_point[0]], [-first_point[1]]])
+            B = np.array([[second_point[0]], [-second_point[1]]])
+
+            # Define the x-axis vector as a column vector
+            x_axis = np.array([[1], [0]])
+
+            # Compute the vector from A to B
+            vector_AB = B - A
+
+            # Compute the dot product between the vector AB and the x-axis vector
+            dot_product = np.dot(vector_AB.T, x_axis)
+
+            # Compute the magnitudes of the vectors
+            magnitude_AB = np.linalg.norm(vector_AB)
+            magnitude_x_axis = np.linalg.norm(x_axis)
+
+            # Compute the cosine of the angle between the vector and the x-axis
+            cosine_angle = dot_product / (magnitude_AB * magnitude_x_axis)
+
+            # Compute the angle in radians using the arccosine function
+            angle = np.arccos(cosine_angle)
+
+            angle_sum += angle
+            count += 1
+
+    average_angle = angle_sum / count
+
+    # Reorient the image according to the average angle
+    height, width = img.shape[:2]
+    center = (width // 2, height // 2)
+    M = cv2.getRotationMatrix2D(center, math.degrees(average_angle[0][0]), 1.0)
+    rotated = cv2.warpAffine(img, M, (width, height), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REPLICATE)
+
+    return rotated
