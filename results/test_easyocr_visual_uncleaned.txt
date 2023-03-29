@@ -1,0 +1,669 @@
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt/000008.png
+01,7i
+{IOOM E
+WR56.88
+WJ
+FINAL
+1.01.16 5
+1
+IRL
+CORBY Eoin
+1.01.16 5
+2 GBR
+GOODBURN Archie
+4
+3 CAN
+MASTROMATTEO Cabe
+1.00.69
+4
+USA
+MATHENY Josh
+1.00.17 2
+5 USA
+HOUSEMAN Kevin
+1.00.55 3
+6
+JPNE
+SATO Shoma
+1.01.26 7
+7
+RUS
+GERASIMENKO Vladislav
+59.97
+1
+8
+JPNE
+ARAI Yuta
+1.01.26
+7
+OMEGA
+BREASTSTROKE
+[59.01
+MENS _
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt/000009.png
+FIN
+Rre
+Women's IOOm Freestyle
+Fiml
+pon
+IWR
+KZALER
+52.72 CR
+J3t5
+BLUME Pernille
+53.44
+coni
+254
+HEEMSKERK Femke
+53.54
+356
+PELLEGRINI Federica
+53.66
+DitNUOTO
+45@
+BRUHN Annika
+54.90
+S tiCOLLI
+En
+550
+BUSCH Kim
+55.22
+Ti
+65
+OMOTO Rika
+55.31
+7.66
+MUNOZ DEL CAMPO Lidon]
+55.35
+Lazio
+856
+STEIGER Jessica
+55.66
+Yq
+Juo
+Citta mnetropolitta
+Idi Roma Cuputilt
+FINISHI
+53.44
+ROMA
+SporT]
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt/000013.png
+Messieurs
+100
+m
+Libre
+WR: 46
+91
+NR: 46 . 94
+Series-8
+1
+COIFFARD
+49 ,91
+2
+TRILLAT
+Florian
+8
+51
+85
+3
+MERESSE
+5
+51
+35
+Remi
+4
+HENX Julien
+2
+50. 99
+5
+6
+Jonathan
+56
+7
+LAMBERT
+1
+49
+91
+8
+SALVAN Hadrien
+51.47
+AUBRY
+3
+90
+NaTaTiON
+~Gwe
+51
+45
+~redf
+Rc
+Eaent
+Fz
+Nage
+Leo
+50 .
+ATSU
+Hugo
+50 .
+Flavien
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt/000007.png
+MENS GOM BREASTSTROKE
+26.68
+OMEGA
+SEMIFINAL 1
+WR26.10
+CRI26.10
+Jlidea
+1
+SWE
+SKAGIUS Johannes
+27.02
+5
+2
+JPN
+KOSEKI Yasuhiro
+27.17
+6
+3
+BRA
+LIMA Felipe
+26.68
+1
+4
+RSA
+VAN DER BURGH Cameron
+26.74
+2
+5
+USA
+CORDES Kevin
+26.86
+3
+6
+ITA
+SCOZZOLI Fabio
+26.96
+4
+CHN
+YAN Zibei
+27.33
+8
+8
+SLO"
+'STEVENS Peter
+27.20
+7
+Isnmsuncoe
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt/000006.png
+6/6
+1.55.98
+79 CR
+7
+WJ
+Ruan
+4
+RSA
+GER
+Bjorn
+5
+2 HUN
+TOROKI
+Vadim
+2.01.48 6
+3
+RUS
+KLIMENISHCHEV
+1:55.98
+1
+USA
+URLANDO Luca
+156.86 2
+5
+TPEL
+WANG Kuan-Hung
+3
+6
+USA
+BURNS Brendan
+1.59.34
+8
+PHI
+KHOUZAM Jean-Pierre
+2.04.38
+9
+SGP
+TAN Ephraim
+2.04.36 8
+OMEGA
+HEAT ,
+BUITERFLY - L
+2OOM L
+MENS =
+1.53.87
+2.04.28
+1153.7
+BREYTENBACHI
+1.59.76
+KAMMANNE
+1.59.90
+Dominik
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt/000012.png
+MEN'S 50M FREESTYLE
+21.61
+HEAT 10
+WR20.91
+OR21.30
+1
+AUS
+ABOOD Matthew
+22.47
+8
+2
+JPN
+NAKAMURA Katsumi
+22.13
+7
+3
+GBR
+PROUD Ben
+21.83
+4
+USA
+ADRIAN Nathan
+21.61
+5
+USA
+ERVIN Anthony
+21.63
+;
+6
+GRE
+GKOLOMEEV Kristian
+21.93
+7
+CAN
+CONDORELLI Santo
+21.83
+3
+8
+ROU
+TRANDAFIR Norbert
+22.10
+6
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt/000004.png
+Danes 100 n Brasse Series-6
+MR:1;02.36 NR:1.05,43
+1,07.13
+0 FRA ONOLFO Ema
+9
+1;13,34
+1  FRA BARREAU Laure
+6
+1;12,29
+27FRA RAVNERT  Maud
+5
+1:10,96
+3  FRA BLANCHETIERE Adele
+7
+1;12,41
+FRA DEBERGHES
+1
+1;07,13
+5 FRA GalLegO Solene
+2
+1.08.30
+6 FRA DELHAS Justine
+3
+1:10.27
+FRA PAQUiT  Laura
+1;10,33
+8 FRA DeAge A7bane
+8
+1:13.32
+9 FRA LINDAUER Enma
+10  1:13,74
+WMC
+Waanna
+3edr
+T?
+N
+Fanny
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt/000010.png
+1
+2
+USA
+3
+4
+5
+6
+1
+NED
+8
+0
+5
+5
+USA
+MANUEL
+Simone
+COMERFORD
+AUS
+Mallory
+McKEON
+SWE
+Emma
+SJOESTROEM
+AUS
+Sarah
+CAMPBELL
+CAN
+Cate
+RUCK
+Taylor
+HEEMSKERK
+GBR
+Femke
+ANDERSON 
+Freya
+OMEGA
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt/000011.png
+FINAL
+0
+25.74
+7
+1
+RUS
+'KARASEV GLEB
+25.48
+4
+2
+IRL
+FERGUSON CONOR
+25.52
+5
+3 ROU
+MARTIN DANIEL
+24.63
+1
+4
+USA
+ANDREW MICHAEL
+25.30
+2
+5
+ESP
+GONZALEZ HUGO
+25.38
+3
+6
+POL
+STOKOWSKI KACPER
+25.59
+6
+7
+POL
+KAZMIERCZAK KAMIL
+26.20
+8
+8
+USA
+ALBIERO NICOLAS
+MMEGA
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt/000005.png
+WR;44.94 NR:44.94
+1
+BourELLY
+47.40
+2
+AUBRY
+5
+48,96
+3
+FORRAIFTaorear
+5
+48,96
+4
+Jordan
+3
+48.07
+GROUSSET
+5
+MIGNON
+47,48
+6
+1
+47.40
+7
+GUTH
+49.16
+8
+4
+48,65
+Souhaie]
+8
+50.02
+Tr
+M==
+RMc
+Lorys
+Maxime
+Clement
+ATSU
+Jonathan
+Gui ]laume
+CHATTI
+Natation
+sedF
+Gpcota
+NeWS
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt/000001.png
+JuiA
+U5
+WR
+13
+1
+2
+IU
+3
+5
+56 6
+5
+133 3
+0
+1
+1
+4
+8
+2
+7
+193 8
+1.06.78
+11.04 '
+TXLA
+COX
+Madisyn
+WEISS "
+1.07.51
+ Emily
+MCH
+TUCKER
+1.07
+Miranda
+NYAC
+LARSON 
+1.07 
+Breeja
+CROW
+HARTMAN 
+1.06.78
+Zoie
+TDPS
+DOBLER !
+1.07.37
+Koitlyn
+DCST
+ANDREWS F
+1.07,23
+Ellie
+TNAQ
+POPOV
+1.08.37
+Nikol
+1.08.
+LOMEGA
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt/000014.png
+Danes 100 w Dos Series-6
+UR;5S,03 AR:57,16
+58,42
+0
+FRA POTHET Lola
+10   1.04,93
+1  FRA CORHIER Alexane
+9
+1;04,15
+2  FRA REMBERT  ET??onore
+8
+1;04,06
+31 FRA JEAN Mathilde
+3
+1;01,67
+FRA CINI Mathilde
+1
+58,42
+50 RUS EGOROVA Valeriya
+2
+59,38
+6 FRA  JULTEN CamiTle
+1;02,82
+7  FRA GOURAUD Aqathe
+5
+1;02,54
+8 FRA COUSSON CTothilde
+1;02,62
+9 FRA LECANU Maelle
+1;02.47
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt/000000.png
+WR: 48.88 NR;49.57
+51
+43
+1
+BURBAN Corentin
+8
+55,20
+2
+BREFUEL  Simon
+3
+AVETANd
+54,06
+4
+Thomas
+3
+53.50
+5
+NDovE BROUARD  Yohan
+1
+51,43
+TOMAC
+6
+Pastula
+2
+52.29
+7
+DESPREZ
+5
+54.29|
+8
+BRUN
+Pierre-Yves
+6
+54.54"
+Christophe
+7
+54,70
+Natation
+edF
+T
+M=
+NEwS
+RMc
+Mewen
+Kacper
+Kcoctta
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt/000002.png
+DuTTEKFLY
+2
+WR
+CR
+1
+2
+3
+4
+5
+6
+5
+7
+8
+ITA
+
+SEMIFINAL 
+55,48
+RUS
+CHIMROVA
+GRE
+Svetlana
+NTOUNTOUNAKI
+USA
+Anna
+DAHLIA
+SWEF
+Kelsi
+SJOESTROEM
+CANE
+Sarah
+MACNEIL
+SWE
+Margaret
+HANSSON
+GERE
+Louise
+KOHLER
+Angelina
+BIANCHI 
+Ilaria
+----- Predictions for: data/natation/ROI/CLIP_visual_prompt/000003.png
+MR: 50,25 NR: 51
+65
+1
+53
+11
+HEIDEYER Mika
+5
+55,12
+3
+CARNEZ
+4
+Wattel
+3
+54.70
+5
+MARTEN Mnoie}
+1
+53,11
+6
+NORTIZ YAnoucbka
+2
+63
+7
+Lison
+6
+Celia
+55.17
+8
+SINAPIN Elodie
+55.11
+56.99
+angers
+Matanior
+Oceane
+54.5
+PINSOLLE
+FatSdELA lue
+VNKKI
