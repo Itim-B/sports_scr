@@ -2,12 +2,12 @@ import editdistance
 import re
 import pytesseract
 from PIL import Image
-#import easyocr
+import easyocr
 #from doctr.io import DocumentFile
 #from doctr.models import ocr_predictor
 
 pytesseract.pytesseract.tesseract_cmd = r'/opt/homebrew/bin/tesseract'
-#reader = easyocr.Reader(['en'])
+reader = easyocr.Reader(['en'])
 #predictor = ocr_predictor(pretrained=True, export_as_straight_boxes=True)
 
 def get_champions_names(sport="natation"):
