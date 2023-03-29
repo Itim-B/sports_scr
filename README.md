@@ -14,7 +14,7 @@ To install the Sports SCR application, follow these steps:
 
 To use the Sports SCR application, follow these steps:
 
-- Start the application: python app.py
+- Open a terminal
 - Select the sport you want to detect and recognize players and scores for.
 - Upload a video or image file of the sports match.
 - Wait for the application to process the file and generate the results.
