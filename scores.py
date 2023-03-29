@@ -29,9 +29,10 @@ if __name__ == "__main__":
         for img in imgs_paths:
             # Interest zone detection
             cropped_image = extract_roi_clipseg_visual(img, prompt=default_visual_prompt, thresh=0.5)
+            oriented_image = correct_orientation(cropped_image)
 
             outf.write(f"----- Predictions for: {img}\n")
-            predictions = infer(ocr_engine, cropped_image)
+            predictions = infer(ocr_engine, oriented_image)
             # cleaned_predictions = get_predictions_of_interest(predictions, dic_names)
             # for p in cleaned_predictions:
             #     outf.write(f"{p}\n")
