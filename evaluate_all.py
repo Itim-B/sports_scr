@@ -53,7 +53,7 @@ def compute_metrics(result, groundtruth):
     return word_error_rate/min(len(result), len(groundtruth)), character_error_rate/min(len(result), len(groundtruth))
 
 
-data_path ="./data/champions/natation.txt"
+data_path = os.path.join(dir_path, "data/champions/natation.txt")
 dic_names = get_champions_names(data_path)
 
 
