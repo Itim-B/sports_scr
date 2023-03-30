@@ -43,7 +43,6 @@ markdown-it-py==2.2.0
 matplotlib==3.7.0
 matplotlib-inline==0.1.6
 mdurl==0.1.2
-
 mmcls==0.25.0
 mmcv-full==1.7.1
 mmsegmentation==0.30.0
@@ -53,7 +52,7 @@ nest-asyncio==1.5.6
 networkx==3.0
 ninja==1.11.1
 numpy==1.23.5
-opencv-python==4.7.0.72
+opencv-python==4.5.5.64
 opencv-python-headless==4.5.4.60
 openmim==0.3.6
 ordered-set==4.1.0
