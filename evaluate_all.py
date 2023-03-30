@@ -15,7 +15,7 @@ warnings.filterwarnings("ignore")
 
 from torchmetrics import CharErrorRate, MatchErrorRate, WordErrorRate
 
-data_path = "/home/said/courses/Projetinfo/sports_scr/data/champions/natation.txt"
+data_path = "./data/champions/natation.txt"
 dic_names = get_champions_names(data_path)
 scoreboard_path = "./data/natation/ROI/CLIP_visual_prompt/scoreboard.png"
 default_visual_prompt = Image.open(scoreboard_path)
