@@ -15,9 +15,14 @@ warnings.filterwarnings("ignore")
 
 from torchmetrics import CharErrorRate, MatchErrorRate, WordErrorRate
 
-data_path = "./data/champions/natation.txt"
+
+# this is the default visual prompt used to identify the ROIs.
+cur_path = os.path.abspath(__file__)
+dir_path = os.path.dirname(cur_path)
+
+data_path = os.path.join(dir_path, "data/champions/natation.txt")
 dic_names = get_champions_names(data_path)
-scoreboard_path = "./data/natation/ROI/CLIP_visual_prompt/scoreboard.png"
+scoreboard_path = os.path.join(dir_path, "data/natation/ROI/CLIP_visual_prompt/scoreboard.png")
 default_visual_prompt = Image.open(scoreboard_path)
 default_visual_prompt = np.array(default_visual_prompt)[:,:, 0:3]
 
