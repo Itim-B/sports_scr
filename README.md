@@ -10,6 +10,8 @@ Before using the application, we need to install some things first.
 
 It is recommended to use a virtual env (using venv or conda or any other package manager) to avoid conflicts and dependecy issues.
 
+**The Python version used is : Python 3.8.16**
+
 ## Install Tesseract:
 
 Refer to the documentation of Tesseract : https://tesseract-ocr.github.io/tessdoc/Installation.html.
@@ -53,10 +55,10 @@ To use the Sports SCR application, follow these steps:
 for example : 
 
 ```console
-$ python3 scores.py natation doctr data/natation/000006.png True
+$ python3 scores.py natation easyocr data/natation/000006.png False
 ```
 
-will run prediction for 'natation' on image 000006.png using doctr ocr engine and will correct teh extracted names from a dictionnary. The result will be available in *result/000006.csv*
+will run prediction for 'natation' on image 000006.png using doctr ocr engine and will not correct the extracted names from a dictionnary. The result will be available in *result/000006.csv*
 
 - Wait for the application to process the file and generate the results in CSV file in */result*.
 

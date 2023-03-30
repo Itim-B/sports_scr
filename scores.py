@@ -21,8 +21,6 @@ if __name__ == "__main__":
     image_path = sys.argv[3]
     correct_names = sys.argv[4] == 'True'
 
-    print(type(correct_names), correct_names)
-
     data_path = os.path.join(dir_path, f"data/champions/{sport}.txt")
 
     if sport == "tennis_table":
