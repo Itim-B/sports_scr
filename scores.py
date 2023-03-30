@@ -48,12 +48,10 @@ if __name__ == "__main__":
             oriented_image = img
         predictions = infer(ocr_engine, oriented_image)
         input_string = ' '.join(predictions)
-        result = extract_names_scores(input_string, dic_names, min_edit_distance=3)
+        result = extract_names_scores(input_string, dic_names, correct_names=True, min_edit_distance=3)
         output_file_path = os.path.join(dir_path, "result")
-        print(output_file_path)
         if not os.path.exists(output_file_path):
             os.makedirs(output_file_path)
-        print(os.path.join(output_file_path, f"{img.split('/')[-1].split('.')[0]}.csv"))
         with open(os.path.join(output_file_path, f"{img.split('/')[-1].split('.')[0]}.csv"), "w") as outf:
             for r in result:
                 row = r.split()
