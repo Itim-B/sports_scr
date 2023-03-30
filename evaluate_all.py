@@ -82,7 +82,7 @@ def evaluate(ocr_engine, orientation, clip, correct_names=False):
 
         groundtruth_path = img.split('.')
         groundtruth_path[-1] = ".txt"
-        groundtruth_path = './' + ''.join(groundtruth_path)
+        groundtruth_path = ''.join(groundtruth_path)
         groundtruth = get_ground_truth(groundtruth_path)
 
         try:
