@@ -8,10 +8,6 @@ import warnings
 # Ignore the warning
 warnings.filterwarnings("ignore")
 
-# TODO: test correction d'orientation
-# TODO: combinaison EasyOCR et PyTesseract
-# TODO: ajout zone d'intérêt
-
 # this is the default visual prompt used to identify the ROIs.
 cur_path = os.path.abspath(__file__)
 dir_path = os.path.dirname(cur_path)
@@ -23,6 +19,9 @@ if __name__ == "__main__":
     sport = sys.argv[1]
     ocr_engine = sys.argv[2]
     image_path = sys.argv[3]
+    correct_names = sys.argv[4] == 'True'
+
+    print(type(correct_names), correct_names)
 
     data_path = os.path.join(dir_path, f"data/champions/{sport}.txt")
 
@@ -48,7 +47,7 @@ if __name__ == "__main__":
             oriented_image = img
         predictions = infer(ocr_engine, oriented_image)
         input_string = ' '.join(predictions)
-        result = extract_names_scores(input_string, dic_names, correct_names=False, min_edit_distance=3)
+        result = extract_names_scores(input_string, dic_names, correct_names=correct_names, min_edit_distance=3)
         output_file_path = os.path.join(dir_path, "result")
         if not os.path.exists(output_file_path):
             os.makedirs(output_file_path)

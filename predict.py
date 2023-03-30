@@ -186,7 +186,6 @@ def extract_names_scores(input_string, dic_names, correct_names=False, min_edit_
         good_times = good_times[::-1]
 
     except Exception as e:
-        print(e)
         good_times = times[0:len(good_names)]
     
     good_first_names = [v for k, v in last_first_name_map.items() if k in good_names]

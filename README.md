@@ -4,6 +4,24 @@ The Sports SCR (Sports Scene Character Recognition) project is an application th
 
 # Installation
 
+Before using the application, we need to install some things first.
+
+## Create a virtual environement:
+
+It is recommended to use a virtual env to avoid conflicts and dependecy issues.
+
+## Install Tesseract:
+
+Refer to the documentation of Tesseract : https://tesseract-ocr.github.io/tessdoc/Installation.html.
+
+Once installed, add the tesseract's binary path to your system like this :
+
+In this case it's in */usr/bin/tesseract*
+
+```
+pytesseract.pytesseract.tesseract_cmd = r'/usr/bin/tesseract'
+```
+
 To install the Sports SCR application, follow these steps:
 
 - Clone the repository:
@@ -29,20 +47,20 @@ To use the Sports SCR application, follow these steps:
 - Indicate the path of an image (video later) file of the sports match, as follows:
 
     ```console
-    $ python3 scores.py [sport] [ocr engine] path/to/image.png
+    $ python3 scores.py [sport] [ocr engine] [path/to/image] [correct_names]
     ```
 
 for example : 
 
 ```console
-$ python3 scores.py natation doctr data/natation/000006.png
+$ python3 scores.py natation doctr data/natation/000006.png True
 ```
 
-will run prediction for 'natation' on image 000006.png using doct ocr engine. The result will be available in *result/000006.csv*
+will run prediction for 'natation' on image 000006.png using doctr ocr engine and will correct teh extracted names from a dictionnary. The result will be available in *result/000006.csv*
 
 - Wait for the application to process the file and generate the results in CSV file in */result*.
 
-The application will generate a video or image file with the recognized players and their scores highlighted. It will also output a JSON file with the detected player names and scores.
+The application will output a CSV file with the detected player names and scores.
 
 # Supported Sports
 
