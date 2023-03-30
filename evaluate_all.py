@@ -72,7 +72,7 @@ def process_img(img, orientation, clip):
 
 def evaluate(ocr_engine, orientation, clip, correct_names=False):
     total_wer, total_cer = 0, 0
-    img_paths = create_images_path_list("./data/natation")
+    img_paths = create_images_path_list(os.path.join(dir_path, "data/natation"))
     for img in img_paths:
         processed_img = process_img(img, orientation, clip)
 
