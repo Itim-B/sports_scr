@@ -8,7 +8,7 @@ Before using the application, we need to install some things first.
 
 ## Create a virtual environement:
 
-It is recommended to use a virtual env to avoid conflicts and dependecy issues.
+It is recommended to use a virtual env (using venv or conda or any other package manager) to avoid conflicts and dependecy issues.
 
 ## Install Tesseract:
 
