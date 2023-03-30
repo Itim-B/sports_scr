@@ -48,7 +48,7 @@ if __name__ == "__main__":
             oriented_image = img
         predictions = infer(ocr_engine, oriented_image)
         input_string = ' '.join(predictions)
-        result = extract_names_scores(input_string, dic_names, correct_names=True, min_edit_distance=3)
+        result = extract_names_scores(input_string, dic_names, correct_names=False, min_edit_distance=3)
         output_file_path = os.path.join(dir_path, "result")
         if not os.path.exists(output_file_path):
             os.makedirs(output_file_path)
