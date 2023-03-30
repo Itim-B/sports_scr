@@ -7,11 +7,11 @@ import os
 import cv2
 import easyocr
 import math
-import mmcv
+#import mmcv
 import numpy as np
 import torch
 # SegFormer imports
-from mmseg.apis import inference_segmentor, init_segmentor
+#from mmseg.apis import inference_segmentor, init_segmentor
 # CLIPSeg imports
 from PIL import Image
 from transformers import CLIPSegForImageSegmentation, CLIPSegProcessor

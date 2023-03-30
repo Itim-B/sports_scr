@@ -5,12 +5,12 @@ import easyocr
 import editdistance
 from doctr.io import DocumentFile
 from doctr.models import ocr_predictor
-#import pytesseract
+import pytesseract
 from PIL import Image
 
 # Ignore the warning
 warnings.filterwarnings("ignore")
-#pytesseract.pytesseract.tesseract_cmd = r'/opt/homebrew/bin/tesseract'
+pytesseract.pytesseract.tesseract_cmd = r'/usr/bin/tesseract'
 reader = easyocr.Reader(['en'])
 predictor = ocr_predictor(pretrained=True, export_as_straight_boxes=True)
 
@@ -131,7 +131,7 @@ def separate_cursed_names(string):
         string = string.replace(old_word, new_word)
     return string
 
-def extract_names_scores(input_string, dic_names, min_edit_distance=3):
+def extract_names_scores(input_string, dic_names, correct_names=False, min_edit_distance=3):
     # Separate cursed names
     input_string = separate_cursed_names(input_string)
     # Define the regular expression pattern
@@ -165,10 +165,17 @@ def extract_names_scores(input_string, dic_names, min_edit_distance=3):
     
     # Filter names
     good_names = []
+    good_first_names = []
     for name in last_first_name_map.keys():
         for dic_name in dic_names.keys():
             if editdistance.eval(name, dic_name) <= min_edit_distance:
-                good_names.append(name)
+                if correct_names:
+                    good_names.append(dic_name)
+                    good_first_names.append(dic_names[dic_name])
+
+                else:
+                    good_names.append(name)
+                    good_first_names.append(last_first_name_map[name])
                 break
             else:
                 pass
