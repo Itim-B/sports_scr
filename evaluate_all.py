@@ -106,16 +106,65 @@ def evaluate_all_combinations() -> Tuple[List[float], List[float]]:
     correct_names_options = [True, False]
 
     # Evaluate all combinations of the parameters
-    for engine in ocr_engines:
-        for orientation in orientations:
-            for clip in clips:
-                for correct_names in correct_names_options:
-                    print(f"------ engine = {engine}, orientation={orientation}, clip={clip}, correct_names={correct_names} ----")
-                    wer, cer = evaluate(engine, orientation, clip, correct_names)
-                    wer_list.append(wer)
-                    cer_list.append(cer)
+    with open(os.path.join(dir_path, "result/experiments.txt"), "w") as f:
+        f.write(f"engine\torientation\tclip\tcorrect_names\twer\tcer\n")
+        for engine in ocr_engines:
+            for orientation in orientations:
+                for clip in clips:
+                    for correct_names in correct_names_options:
+                        print(f"------ engine = {engine}, orientation={orientation}, clip={clip}, correct_names={correct_names} ----")
+                        wer, cer = evaluate(engine, orientation, clip, correct_names)
+                        #wer, cer = 0.5, 0.5
+                        wer_list.append(wer)
+                        cer_list.append(cer)
+                        f.write(f"{engine}\t{orientation}\t{clip}\t{correct_names}\t{wer}\t{cer}\n")
 
     return wer_list, cer_list
+
+# def plot_results(wer_list: List[float], cer_list: List[float]) -> None:
+#     fig, ax = plt.subplots()
+
+#     ocr_engines = ["doctr", "easyocr", "pytesseract"]
+#     orientations = [True, False]
+#     clips = [True, False]
+#     correct_names_options = [True, False]
+    
+#     # Create a custom colormap
+#     cmap = mcolors.LinearSegmentedColormap.from_list(
+#     'pastel_rainbow', 
+#     #['#fca3b1', '#f7c1ad', '#ffdea7', '#e4f4a4', '#b2dfb5', '#82d7e6', '#8cb5e5', '#c0a5e8'],
+#     ['#FF9AA2', '#FFB7B2', '#FFDAC1', '#E2F0CB', '#B5EAD7', '#C7CEEA', '#B5B8FF'],
+#     #["#3F5D7D", "#F2B447", "#E76F51", "#2A9D8F"],
+#     N=len(wer_list))
+    
+#     # Evaluate all combinations of the parameters
+#     for i, engine in enumerate(ocr_engines):
+#         for j, orientation in enumerate(orientations):
+#             for k, clip in enumerate(clips):
+#                 for l, correct_names in enumerate(correct_names_options):
+#                     idx = i * len(orientations) * len(clips) * len(correct_names_options) \
+#                           + j * len(clips) * len(correct_names_options) \
+#                           + k * len(correct_names_options) \
+#                           + l
+#                     if idx >= len(wer_list):
+#                         continue
+                    
+#                     label = f"{engine}, orientation={orientation}, clip={clip}, correct_names={correct_names}"
+#                     color = cmap(idx)
+#                     ax.scatter(wer_list[idx], cer_list[idx], label=label, color=color)
+                    
+#     ax.set_xlabel("WER")
+#     ax.set_ylabel("CER")
+#     ax.set_title("OCR engine evaluation")
+#     ax.set_xlim([0, 1])
+#     ax.set_ylim([0, 1])
+#     ax.set_xticks(np.arange(0, 1.1, 0.1))
+#     ax.set_yticks(np.arange(0, 1.1, 0.1))
+#     ax.legend(bbox_to_anchor=(1.05, 1), loc="upper left", fontsize=7)
+#     ax.grid(True)
+
+#     plt.show()
+#     fig.savefig("ocr_evaluation_test.png", dpi=300, bbox_inches="tight")
 
 def plot_results(wer_list: List[float], cer_list: List[float]) -> None:
     fig, ax = plt.subplots()
@@ -127,11 +176,15 @@ def plot_results(wer_list: List[float], cer_list: List[float]) -> None:
     
     # Create a custom colormap
     cmap = mcolors.LinearSegmentedColormap.from_list(
-    'pastel_rainbow', 
-    #['#fca3b1', '#f7c1ad', '#ffdea7', '#e4f4a4', '#b2dfb5', '#82d7e6', '#8cb5e5', '#c0a5e8'],
-    #['#FF9AA2', '#FFB7B2', '#FFDAC1', '#E2F0CB', '#B5EAD7', '#C7CEEA', '#B5B8FF'],
-    ["#3F5D7D", "#F2B447", "#E76F51", "#2A9D8F"],
-    N=len(wer_list))
+        'pastel_rainbow', 
+        #['#fca3b1', '#f7c1ad', '#ffdea7', '#e4f4a4', '#b2dfb5', '#82d7e6', '#8cb5e5', '#c0a5e8'],
+        #['#FF9AA2', '#FFB7B2', '#FFDAC1', '#E2F0CB', '#B5EAD7', '#C7CEEA', '#B5B8FF'],
+        ["#3F5D7D", "#F2B447", "#E76F51", "#2A9D8F"],
+        N=len(wer_list))
+    
+    # Define markers and colors for each OCR engine
+    markers = {"doctr": "s", "easyocr": "o", "pytesseract": "^"}
+    colors = {"doctr": "#3F5D7D", "easyocr": "#F2B447", "pytesseract": "#E76F51"}
     
     # Evaluate all combinations of the parameters
     for i, engine in enumerate(ocr_engines):
@@ -147,7 +200,8 @@ def plot_results(wer_list: List[float], cer_list: List[float]) -> None:
                     
                     label = f"{engine}, orientation={orientation}, clip={clip}, correct_names={correct_names}"
                     color = cmap(idx)
-                    ax.scatter(wer_list[idx], cer_list[idx], label=label, color=color)
+                    marker = markers[engine]
+                    ax.scatter(wer_list[idx], cer_list[idx], label=label, color=color, marker=marker)
                     
     ax.set_xlabel("WER")
     ax.set_ylabel("CER")
@@ -156,9 +210,14 @@ def plot_results(wer_list: List[float], cer_list: List[float]) -> None:
     ax.set_ylim([0, 1])
     ax.set_xticks(np.arange(0, 1.1, 0.1))
     ax.set_yticks(np.arange(0, 1.1, 0.1))
-    ax.legend(bbox_to_anchor=(1.05, 1), loc="upper left", fontsize=7)
+    ax.legend(bbox_to_anchor=(1.05, 1), loc="upper left", fontsize="xx-small")
+    
+    # Add a grid and special symbols for each OCR engine
+    ax.grid(True)
+    ax.legend(scatterpoints=1, loc='center left', bbox_to_anchor=(1.05, 0.5))
+    
     plt.show()
-    fig.savefig("ocr_evaluation.png", dpi=300, bbox_inches="tight")
+    fig.savefig(os.path.join(dir_path, "plots/ocr_evaluation_grid.png"), dpi=300, bbox_inches="tight")
 
 if __name__ == "__main__": 
     wer_list, cer_list = evaluate_all_combinations()
