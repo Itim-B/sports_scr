@@ -6,9 +6,9 @@ The Sports SCR (Sports Scene Character Recognition) project is an application th
 
 Before using the application, we need to install some things first.
 
-## Create a virtual environement:
+## Create a virtual environment:
 
-It is recommended to use a virtual env (using venv or conda or any other package manager) to avoid conflicts and dependecy issues.
+It is recommended to use a virtual env (using venv or conda or any other package manager) to avoid conflicts and dependency issues.
 
 **The Python version used is : Python 3.8.16**
 
@@ -63,7 +63,7 @@ for example :
 $ python3 scores.py natation easyocr data/natation/000006.png ron
 ```
 
-will run prediction for 'natation' on image 000006.png using doctr ocr engine, will not correct the extracted names from a dictionnary, the orientation, and will not detect a roi before infering. The result will be available in *result/000006.csv*
+will run prediction for 'natation' on image 000006.png using easyocr ocr engine, will not correct the extracted names from a dictionnary, the orientation, and will not detect a roi before infering. The result will be available in *result/000006.csv*
 
 - Wait for the application to process the file and generate the results in CSV file in */result*.
 
