@@ -46,19 +46,24 @@ To use the Sports SCR application, follow these steps:
 - Open a terminal
 - Select the sport you want to detect and recognize players and scores for : 'tennis' or 'natation' .
 - Select an OCR engine to use from 3 choices : *easyocr*, *doctr* or *pytesseract*. *doctr* is the default
-- Indicate the path of an image (video later) file of the sports match, as follows:
+- Indicate the path of an image (video later) file of the sports match
+- (optional) Indicate if you want some processing functions to be DISABLED. <u>All enabled by default</u>. Key letters : 
+    - r for ROI detection
+    - o for orientation correction (recommanded but a little time consuming)
+    - n for names corrections using champions folder file
+As follows:
 
     ```console
-    $ python3 scores.py [sport] [ocr engine] [path/to/image] [correct_names]
+    $ python3 scores.py [sport] [ocr engine] [path/to/image] [processing_exceptions](optional)
     ```
 
 for example : 
 
 ```console
-$ python3 scores.py natation easyocr data/natation/000006.png False
+$ python3 scores.py natation easyocr data/natation/000006.png ron
 ```
 
-will run prediction for 'natation' on image 000006.png using doctr ocr engine and will not correct the extracted names from a dictionnary. The result will be available in *result/000006.csv*
+will run prediction for 'natation' on image 000006.png using doctr ocr engine, will not correct the extracted names from a dictionnary, the orientation, and will not detect a roi before infering. The result will be available in *result/000006.csv*
 
 - Wait for the application to process the file and generate the results in CSV file in */result*.
 
