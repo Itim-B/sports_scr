@@ -19,7 +19,10 @@ if __name__ == "__main__":
     sport = sys.argv[1]
     ocr_engine = sys.argv[2]
     image_path = sys.argv[3]
-    correct_names = sys.argv[4] == 'True'
+    processing_exceptions = sys.argv[4] if len(sys.argv) >= 5 else ""
+    correct_names = "n" not in processing_exceptions
+    orientation_correction = "o" not in processing_exceptions
+    get_roi = "r" not in processing_exceptions
 
     data_path = os.path.join(dir_path, f"data/champions/{sport}.txt")
 
@@ -39,8 +42,8 @@ if __name__ == "__main__":
     for img in imgs_paths:
         # Interest zone detection
         if sport == "natation":
-            cropped_image = extract_roi_clipseg_visual(img, prompt=default_visual_prompt, thresh=0.5)
-            oriented_image = correct_orientation(cropped_image)
+            cropped_image = extract_roi_clipseg_visual(img, prompt=default_visual_prompt, thresh=0.5) if get_roi else np.array(Image.open(img))
+            oriented_image = correct_orientation(cropped_image) if orientation_correction else cropped_image
         else:
             oriented_image = img
         predictions = infer(ocr_engine, oriented_image)
